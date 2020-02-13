@@ -85,8 +85,8 @@ $await.defaultSpinnerScale = 1
 // gets the component to be shown when 'myRequestName' is loading
 const spinnerOfMyRequest = $await.loader['myRequestName']
 
-// define the component to be shown when 'myRequestName' is loading
-$await.addLoader('myRequestName', MyComponentClass)
+// define the component to be shown when using 'MyComp' as loader
+$await.addLoader('MyComp', MyComponentClass)
 
 // returns a boolean indicating if 'myRequestName' is loading
 const isLoading = $await.inAction('myRequestName')
@@ -111,4 +111,12 @@ $await.run('myRequestName', async () => {
 ```typescript
 RequestListener.onRequestStart(reqName => $await.init(reqName))
 RequestListener.onRequestEnd(reqName => $await.done(reqName))
+```
+
+## Using with [Vue-spinner](https://github.com/greyby/vue-spinner)
+```typescript
+import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue'
+
+$await.addLoader('ScaleLoader', ScaleLoader)
+$await.defaultSpinner = 'ScaleLoader'
 ```

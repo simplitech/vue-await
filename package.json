@@ -1,6 +1,6 @@
 {
   "name": "@simpli/vue-await",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Easy-to-use loading indicator",
   "keywords": [],
   "main": "lib/index.js",

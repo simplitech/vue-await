@@ -10,4 +10,4 @@ export default class AwaitWrapper {
   }
 }
 
-export { $await, Await }
+export { $await, Await, AwaitController }

@@ -5,7 +5,7 @@ const $await = new AwaitController()
 
 export default class AwaitWrapper {
   static install() {
-    Vue.component(Await.name, Await)
+    Vue.component('Await', Await)
     Vue.prototype.$await = $await
   }
 }
